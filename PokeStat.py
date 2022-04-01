@@ -1,4 +1,4 @@
-class pokestat():
+class PokeStat():
     
     def hpstat(pokeBase,pokeIV,pokeEV,pokeLVL):
         hp = (((2*pokeBase+pokeIV+(pokeEV/4))*pokeLVL)/100)+pokeLVL+10
