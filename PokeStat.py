@@ -1,7 +1,10 @@
+from math import floor
+
+
 class PokeStat():
     
     def hpstat(pokeBase,pokeIV,pokeEV,pokeLVL):
-        hp = (((2*pokeBase+pokeIV+(pokeEV/4))*pokeLVL)/100)+pokeLVL+10
+        hp = floor((((2*pokeBase+pokeIV+(pokeEV/4))*pokeLVL)/100))+pokeLVL+10
         return hp
 
     def atkstat(pokeBase,pokeIV,pokeEV,pokeLVL,pokeNature):
@@ -13,7 +16,7 @@ class PokeStat():
         else: 
             nature=1.0
         atk = ((((2*pokeBase+pokeIV+(pokeEV/4))*pokeLVL)/100)+5)*nature
-        return atk
+        return floor(atk)
 
     def defstat(pokeBase,pokeIV,pokeEV,pokeLVL,pokeNature):
         nature=0
@@ -24,7 +27,7 @@ class PokeStat():
         else: 
             nature=1.0
         defe = ((((2*pokeBase+pokeIV+(pokeEV/4))*pokeLVL)/100)+5)*nature
-        return defe
+        return floor(defe)
 
     def spatkstat(pokeBase,pokeIV,pokeEV,pokeLVL,pokeNature):
         nature=0
@@ -35,7 +38,7 @@ class PokeStat():
         else: 
             nature=1.0
         spatk = ((((2*pokeBase+pokeIV+(pokeEV/4))*pokeLVL)/100)+5)*nature
-        return spatk
+        return floor(spatk)
 
     def spdefstat(pokeBase,pokeIV,pokeEV,pokeLVL,pokeNature):
         nature=0
@@ -46,7 +49,7 @@ class PokeStat():
         else: 
             nature=1.0
         spdef = ((((2*pokeBase+pokeIV+(pokeEV/4))*pokeLVL)/100)+5)*nature
-        return spdef
+        return floor(spdef)
     
     def spdstat(pokeBase,pokeIV,pokeEV,pokeLVL,pokeNature):
         nature=0
@@ -57,4 +60,4 @@ class PokeStat():
         else: 
             nature=1.0
         spd = ((((2*pokeBase+pokeIV+(pokeEV/4))*pokeLVL)/100)+5)*nature
-        return spd
+        return floor(spd)
